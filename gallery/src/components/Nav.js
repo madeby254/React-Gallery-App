@@ -1,28 +1,25 @@
-//import React
 import React from "react";
-//import NavLink from react router
 import { NavLink } from 'react-router-dom';
 
-//Nav function create navigation for default results
 const Nav = (props) => (
 
     <nav className="main-nav">
         <ul>
             <li>
-                <NavLink to='/search/bird'>Bird</NavLink>
+                <NavLink to='/search/meerkat'>Meerkat</NavLink>
             </li>
             <li>
-                <NavLink to='/search/cat'>Cat</NavLink>
+                <NavLink to='/search/lion'>Simba</NavLink>
             </li>
             <li>
-                <NavLink to='/search/horse'>Horse</NavLink>
+                <NavLink to='/search/leopard'>leopard</NavLink>
             </li>
             <li>
-                <NavLink to='/search/cow'>Cow</NavLink>
+                <NavLink to='/search/hyena'>Hyena</NavLink>
             </li>
         </ul>
     </nav>
 
 );
-//export Nav Function
+
 export default Nav;
