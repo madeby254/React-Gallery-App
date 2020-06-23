@@ -7,7 +7,7 @@ Setup
         1. In the Directory run
                 npm install
                 
-        2. Get a Flicr Api Key from [Here](https://www.flickr.com/services/apps/create/apply/)    
+        2. Get a Flickr Api Key from [Here](https://www.flickr.com/services/apps/create/apply/)    
         
         3. create your own config.js file and place it inside of a src directory.
                 it should look like this 
@@ -18,4 +18,4 @@ Setup
          4. To start the App 
                 npm start
                 
-          and open in a browser http://localhost:3000. The page will automatically reload when you make changes      
+          and open in a browser http://localhost:3000. The page will automatically reload when you make changes    
