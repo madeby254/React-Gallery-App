@@ -1,6 +1,4 @@
-
 import React from "react";
-
 
 const NotFound = () => (
     <li className="not-found">
