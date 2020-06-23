@@ -1,6 +1,4 @@
-
 import React, { Component } from "react";
-
 import Photo from "./Photo";
 import NotFound from "./NotFound";
 import Loading from "./Loading";
@@ -43,7 +41,7 @@ class PhotoContainer extends Component {
         return (
             <div className="photo-container">
                 <h2>Here are your results for {this.props.routeMatch.params.query}</h2>
-                <ul> {/*variable  holding photos, loading or notfound*/}
+                <ul>
                     {images}
                 </ul>
             </div>
