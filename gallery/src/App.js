@@ -1,7 +1,7 @@
 //import React
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 //import React Router elements
-import {BrowserRouter as Router, Switch, Route, Redirect} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 //import axios for fetching data
 import axios from 'axios';
 //import components
@@ -11,7 +11,7 @@ import Nav from "./components/Nav";
 import PhotoContainer from "./components/PhotoContainer";
 import Error from "./components/Error";
 //flicker config
-import apiKey from "./config.js";
+import apiKey from "./components/config";
 
 
 //app class handle page components
@@ -28,8 +28,8 @@ class App extends Component {
 
     search = (query = 'horse') => {
         this.setState({
-            isLoading:true,
-            images:[]
+            isLoading: true,
+            images: []
         });
 
         axios.get(` https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${query}&per_page=24&format=json&nojsoncallback=1`)
@@ -51,22 +51,22 @@ class App extends Component {
         return (
             <Router>
                 <div className="container">
-                    <Header/>
+                    <Header />
                     <SearchForm
                         onSearch={this.search}
                     />
-                    <Nav navSearch={this.search}/>
+                    <Nav navSearch={this.search} />
 
                     <Switch>
-                        <Route exact path="/" render={() => <Redirect to="/search/horses"/>} />
-                        <Route path="/search/:query" render={({match}) => (
-                        <PhotoContainer
-                            routeMatch={match}
-                            data={this.state.images}
-                            queryData={this.state.query}
-                            handleSearch={this.search}
-                            loadingState={this.state.isLoading}
-                        />
+                        <Route exact path="/" render={() => <Redirect to="/search/horses" />} />
+                        <Route path="/search/:query" render={({ match }) => (
+                            <PhotoContainer
+                                routeMatch={match}
+                                data={this.state.images}
+                                queryData={this.state.query}
+                                handleSearch={this.search}
+                                loadingState={this.state.isLoading}
+                            />
                         )} />
                         <Route path="*" component={Error} />
                     </Switch>
